@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpupch8gioirb"]
+[gd_scene load_steps=11 format=3 uid="uid://bpupch8gioirb"]
 
 [ext_resource type="PackedScene" uid="uid://d4dk2jr4ml224" path="res://Scenes/player.tscn" id="1_1kp04"]
 [ext_resource type="Texture2D" uid="uid://bagsk11whnofh" path="res://Assets/2D Space Station Tile Set Assets.png" id="2_5my1m"]
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="2_v8it4"]
 [ext_resource type="PackedScene" uid="uid://btg42qurharxw" path="res://Scenes/ship.tscn" id="3_rwd4p"]
 [ext_resource type="AudioStream" uid="uid://cs1u27mj483dj" path="res://SoundTrack/Smooth Sailing.mp3" id="5_l78yo"]
+[ext_resource type="PackedScene" uid="uid://dwaiwf00a2h3j" path="res://Scenes/Resource_Scenes/diamond.tscn" id="6_8pimy"]
+[ext_resource type="PackedScene" uid="uid://de71f8a0o1nbe" path="res://Scenes/Resource_Scenes/emerald.tscn" id="7_qy00c"]
+[ext_resource type="PackedScene" uid="uid://78dorpuy804l" path="res://Scenes/Resource_Scenes/ruby.tscn" id="8_alkk5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jqs3"]
 texture = ExtResource("2_5my1m")
@@ -2299,8 +2302,6 @@ sources/0 = SubResource("TileSetAtlasSource_3jqs3")
 scale = Vector2(0.2, 0.2)
 script = ExtResource("2_v8it4")
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_fpoqa")
 format = 2
@@ -2313,3 +2314,24 @@ position = Vector2(491, 0)
 stream = ExtResource("5_l78yo")
 volume_db = -18.571
 autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.2, 0.2)
+
+[node name="Diamond" parent="." instance=ExtResource("6_8pimy")]
+position = Vector2(-74, -35)
+
+[node name="Emerald" parent="." instance=ExtResource("7_qy00c")]
+position = Vector2(-92, 13)
+
+[node name="Ruby" parent="." instance=ExtResource("8_alkk5")]
+position = Vector2(-44, 84)
+
+[node name="Emerald2" parent="." instance=ExtResource("7_qy00c")]
+position = Vector2(-14, -42)
+
+[node name="Ruby2" parent="." instance=ExtResource("8_alkk5")]
+position = Vector2(89, -46)
+
+[node name="Diamond2" parent="." instance=ExtResource("6_8pimy")]
+position = Vector2(-173, -123)

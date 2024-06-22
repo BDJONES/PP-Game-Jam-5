@@ -1,37 +1,43 @@
-extends CharacterBody2D
+extends Node
  
-var health: int = 100
-var oxygen: int = 100
-var resource1_amount: int = 0
-var resource2_amount: int = 0
-var resource3_amount: int = 0
+static var health: int = 100
+static var oxygen: int = 100
+static var diamond_amount: int = 0
+static var ruby_amount: int = 0
+static var emerald_amount: int = 0
 
-func increase_health(amount: int):
+static func increase_health(amount: int):
 	health += amount
 
-func decrease_health(amount: int):
+static func decrease_health(amount: int):
 	health -= amount
 
-func increase_oxygen(amount: int):
+static func increase_oxygen(amount: int):
 	oxygen += amount
 
-func decrease_oxygen(amount: int):
+static func decrease_oxygen(amount: int):
 	oxygen -= amount
 
-func increase_resource1_amount(amount: int):
-	resource1_amount += amount
+static func increase_diamond_amount():
+	diamond_amount += 1
+	print(str(diamond_amount))
 
-func decrease_resource1_amount(amount: int):
-	resource1_amount -= amount
+static func decrease_diamond_amount(amount: int):
+	diamond_amount -= amount
+	print(str(diamond_amount))
+	
+static func increase_ruby_amount():
+	ruby_amount += 1
+	print(str(ruby_amount))
 
-func increase_resource2_amount(amount: int):
-	resource2_amount += amount
+static func decrease_ruby_amount(amount: int):
+	ruby_amount -= amount
+	print(str(ruby_amount))
 
-func decrease_resource2_amount(amount: int):
-	resource2_amount -= amount
+static func increase_emerald_amount():
+	emerald_amount += 1
+	print(str(emerald_amount))
 
-func increase_resource3_amount(amount: int):
-	resource3_amount += amount
-
-func decrease_resource3_amount(amount: int):
-	resource3_amount -= amount
+static func  decrease_emerald_amount(amount: int):
+	emerald_amount -= amount
+	print(str(emerald_amount))

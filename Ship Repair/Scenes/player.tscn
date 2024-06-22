@@ -133,7 +133,7 @@ height = 230.0
 [node name="Player" type="CharacterBody2D"]
 z_index = 100
 scale = Vector2(0.1, 0.1)
-script = ExtResource("1_dkllf")
+collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p76yt")
@@ -143,3 +143,6 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 2)
 shape = SubResource("CapsuleShape2D_x8bth")
+
+[node name="PlayerInfo" type="Node" parent="."]
+script = ExtResource("1_dkllf")
