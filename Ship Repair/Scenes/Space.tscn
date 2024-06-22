@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpupch8gioirb"]
+[gd_scene load_steps=7 format=3 uid="uid://bpupch8gioirb"]
 
-[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="1_1kp04"]
+[ext_resource type="PackedScene" uid="uid://d4dk2jr4ml224" path="res://Scenes/player.tscn" id="1_1kp04"]
 [ext_resource type="Texture2D" uid="uid://bagsk11whnofh" path="res://Assets/2D Space Station Tile Set Assets.png" id="2_5my1m"]
-[ext_resource type="PackedScene" uid="uid://cuebnu65t3qqj" path="res://Scenes/ship.tscn" id="3_rwd4p"]
+[ext_resource type="Script" path="res://Scripts/player_movement.gd" id="2_v8it4"]
+[ext_resource type="PackedScene" uid="uid://btg42qurharxw" path="res://Scenes/ship.tscn" id="3_rwd4p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jqs3"]
 texture = ExtResource("2_5my1m")
@@ -2294,6 +2295,7 @@ sources/0 = SubResource("TileSetAtlasSource_3jqs3")
 [node name="Space" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_1kp04")]
+script = ExtResource("2_v8it4")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
