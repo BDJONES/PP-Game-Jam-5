@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://br3vpnm5ag7e1"
+path="res://.godot/imported/Smooth Sailing.mp3-86ae83f89ccb02f38870163bce7be283.mp3str"
+
+[deps]
+
+source_file="res://Scenes/Resource_Scenes/Smooth Sailing.mp3"
+dest_files=["res://.godot/imported/Smooth Sailing.mp3-86ae83f89ccb02f38870163bce7be283.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

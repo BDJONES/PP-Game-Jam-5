@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs1u27mj483dj"
+path="res://.godot/imported/Smooth Sailing.mp3-f1aa1d47003b36e3d02628637715ce46.mp3str"
+
+[deps]
+
+source_file="res://SoundTrack/Smooth Sailing.mp3"
+dest_files=["res://.godot/imported/Smooth Sailing.mp3-f1aa1d47003b36e3d02628637715ce46.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

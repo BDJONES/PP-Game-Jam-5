@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpupch8gioirb"]
+[gd_scene load_steps=8 format=3 uid="uid://bpupch8gioirb"]
 
 [ext_resource type="PackedScene" uid="uid://d4dk2jr4ml224" path="res://Scenes/player.tscn" id="1_1kp04"]
 [ext_resource type="Texture2D" uid="uid://bagsk11whnofh" path="res://Assets/2D Space Station Tile Set Assets.png" id="2_5my1m"]
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="2_v8it4"]
 [ext_resource type="PackedScene" uid="uid://btg42qurharxw" path="res://Scenes/ship.tscn" id="3_rwd4p"]
+[ext_resource type="AudioStream" uid="uid://cs1u27mj483dj" path="res://SoundTrack/Smooth Sailing.mp3" id="5_l78yo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jqs3"]
 texture = ExtResource("2_5my1m")
@@ -2307,3 +2308,8 @@ layer_0/tile_data = PackedInt32Array(-1507316, 3211264, 2, -1441780, 3211264, 3,
 
 [node name="Ship" parent="." instance=ExtResource("3_rwd4p")]
 position = Vector2(491, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_l78yo")
+volume_db = -18.571
+autoplay = true
