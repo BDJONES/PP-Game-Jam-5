@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://d4dk2jr4ml224"]
+[gd_scene load_steps=20 format=3 uid="uid://d4dk2jr4ml224"]
 
 [ext_resource type="Texture2D" uid="uid://cdy2712ow4de" path="res://Assets/Astronaut/space man.png" id="1_8cgrg"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_dkllf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jjndp"]
 atlas = ExtResource("1_8cgrg")
@@ -132,6 +133,7 @@ height = 230.0
 [node name="Player" type="CharacterBody2D"]
 z_index = 100
 scale = Vector2(0.1, 0.1)
+script = ExtResource("1_dkllf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p76yt")
