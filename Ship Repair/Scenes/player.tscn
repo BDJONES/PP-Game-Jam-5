@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4dk2jr4ml224"]
+
+[ext_resource type="Texture2D" uid="uid://cdy2712ow4de" path="res://Assets/Astronaut/space man.png" id="1_8cgrg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsvqi"]
+atlas = ExtResource("1_8cgrg")
+region = Rect2(0, 0, 340, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27401"]
+atlas = ExtResource("1_8cgrg")
+region = Rect2(340, 0, 340, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fptya"]
+atlas = ExtResource("1_8cgrg")
+region = Rect2(680, 0, 340, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bk0e"]
+atlas = ExtResource("1_8cgrg")
+region = Rect2(1020, 0, 340, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi48p"]
+atlas = ExtResource("1_8cgrg")
+region = Rect2(1360, 0, 340, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p76yt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsvqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27401")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fptya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bk0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi48p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8bth"]
+radius = 65.0
+height = 216.0
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p76yt")
+animation = &"idle"
+autoplay = "idle"
+frame = 4
+frame_progress = 0.313677
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 2)
+shape = SubResource("CapsuleShape2D_x8bth")
