@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://de71f8a0o1nbe"]
+
+[ext_resource type="Texture2D" uid="uid://dt6xuiktbcn2p" path="res://Assets/Rocks and Gems/21.png" id="1_2p8jr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqmic"]
+radius = 13.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="emerald" type="Sprite2D" parent="."]
+position = Vector2(1, -11)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_2p8jr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("CircleShape2D_rqmic")
