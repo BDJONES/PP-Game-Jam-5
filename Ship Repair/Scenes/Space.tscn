@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bpupch8gioirb"]
+[gd_scene load_steps=15 format=3 uid="uid://bpupch8gioirb"]
 
 [ext_resource type="PackedScene" uid="uid://d4dk2jr4ml224" path="res://Scenes/player.tscn" id="1_1kp04"]
+[ext_resource type="Script" path="res://Scripts/space.gd" id="1_fbt6y"]
 [ext_resource type="Texture2D" uid="uid://bagsk11whnofh" path="res://Assets/2D Space Station Tile Set Assets.png" id="2_5my1m"]
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="2_v8it4"]
 [ext_resource type="PackedScene" uid="uid://btg42qurharxw" path="res://Scenes/ship.tscn" id="3_rwd4p"]
@@ -2300,6 +2301,10 @@ texture = ExtResource("2_5my1m")
 sources/0 = SubResource("TileSetAtlasSource_3jqs3")
 
 [node name="Space" type="Node2D"]
+script = ExtResource("1_fbt6y")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [node name="Player" parent="." instance=ExtResource("1_1kp04")]
 scale = Vector2(0.2, 0.2)
@@ -2349,3 +2354,5 @@ position = Vector2(-22, -49)
 
 [node name="Diamond" parent="." instance=ExtResource("11_anrse")]
 position = Vector2(-539, -102)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
