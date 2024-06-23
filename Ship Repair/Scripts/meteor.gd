@@ -15,7 +15,8 @@ func _on_body_entered(body):
 	# not take a number unless we want to specify how much damage 
 	# we want the ship to take
 	# ship.descrease_health(10)
-	ship_script.decrease_health(25)
+	if body.name == "Ship":
+		ship_script.decrease_health(25)
 	#damaged_ship.emit()
 	queue_free()
 
