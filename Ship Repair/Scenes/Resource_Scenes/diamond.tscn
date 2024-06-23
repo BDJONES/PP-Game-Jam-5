@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cwykap55ln6um" path="res://Assets/Rocks and Gems/23.png" id="1_kruva"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_214kt"]
-radius = 11.0
+radius = 17.0
 
 [node name="Diamond" type="Area2D"]
 collision_mask = 2
@@ -17,7 +17,7 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_kruva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -13)
+position = Vector2(1, -14)
 shape = SubResource("CircleShape2D_214kt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
