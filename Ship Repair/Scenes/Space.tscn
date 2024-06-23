@@ -2324,30 +2324,87 @@ volume_db = -18.571
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-229, -106)
+position = Vector2(-281, -123)
 scale = Vector2(0.2, 0.2)
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 
-[node name="DiamondInventoryUI" parent="UILayer" instance=ExtResource("6_ygce3")]
-offset_left = 834.0
+[node name="InventoryContainer" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="DiamondInventoryUI" parent="UILayer/InventoryContainer" instance=ExtResource("6_ygce3")]
+offset_left = -111.0
+offset_right = -111.0
+
+[node name="EmeraldInventoryUI" parent="UILayer/InventoryContainer" instance=ExtResource("7_4xs7l")]
+offset_left = 88.0
+offset_right = 88.0
+
+[node name="RubyInventoryUI" parent="UILayer/InventoryContainer" instance=ExtResource("8_vc7dt")]
+offset_left = -11.0
 offset_top = 1.0
-offset_right = 834.0
+offset_right = -11.0
 offset_bottom = 1.0
 
-[node name="EmeraldInventoryUI" parent="UILayer" instance=ExtResource("7_4xs7l")]
-offset_left = 1033.0
-offset_top = 1.0
-offset_right = 1033.0
-offset_bottom = 1.0
+[node name="RequiredMaterials" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
 
-[node name="RubyInventoryUI" parent="UILayer" instance=ExtResource("8_vc7dt")]
-offset_left = 934.0
-offset_top = 2.0
-offset_right = 934.0
-offset_bottom = 2.0
+[node name="DiamondInventoryUI" parent="UILayer/RequiredMaterials" instance=ExtResource("6_ygce3")]
+offset_left = -317.0
+offset_top = 3.0
+offset_right = -317.0
+offset_bottom = 3.0
+
+[node name="EmeraldInventoryUI" parent="UILayer/RequiredMaterials" instance=ExtResource("7_4xs7l")]
+offset_left = -118.0
+offset_top = 3.0
+offset_right = -118.0
+offset_bottom = 3.0
+
+[node name="RubyInventoryUI" parent="UILayer/RequiredMaterials" instance=ExtResource("8_vc7dt")]
+offset_left = -217.0
+offset_top = 4.0
+offset_right = -217.0
+offset_bottom = 4.0
 
 [node name="ShipHealthBar" parent="UILayer" instance=ExtResource("9_k6kn4")]
+
+[node name="Inventory Label" type="Label" parent="UILayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -390.0
+offset_top = 1.0
+offset_right = -141.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Inventory:"
+
+[node name="Cost Label" type="Label" parent="UILayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -567.0
+offset_top = -1.0
+offset_right = -360.0
+offset_bottom = 68.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 50
+text = "Fix Cost:"
 
 [node name="Emerald" parent="." instance=ExtResource("6_6ij0p")]
 position = Vector2(-22, -49)
