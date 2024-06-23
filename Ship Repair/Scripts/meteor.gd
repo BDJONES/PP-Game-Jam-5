@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED = 60
+const SPEED = 200
 
 # Probably need the ship here to update the ships health on collisions 
 @onready var ship_script = get_node("../Ship/Area2D").get_script()

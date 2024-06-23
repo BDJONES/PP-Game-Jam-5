@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bs3joymhct1sk" path="res://Scenes/UI/Emerald Inventory UI.tscn" id="7_4xs7l"]
 [ext_resource type="PackedScene" uid="uid://dsphdm0imrc80" path="res://Scenes/UI/Ruby Inventory UI.tscn" id="8_vc7dt"]
 [ext_resource type="PackedScene" uid="uid://c177hdgpt1wr7" path="res://Scenes/UI/Ship Health Bar.tscn" id="9_k6kn4"]
-[ext_resource type="PackedScene" uid="uid://bvm4xpww4566g" path="res://Scenes/WorldBoundry.tscn" id="13_7nkkg"]
+[ext_resource type="PackedScene" path="res://Scenes/WorldBoundry.tscn" id="13_7nkkg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jqs3"]
 texture = ExtResource("2_5my1m")

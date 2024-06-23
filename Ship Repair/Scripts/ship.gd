@@ -25,6 +25,7 @@ static func decrease_health(amount: int):
 	health -= amount
 	healthbar.value = health
 	print("Health is now " + str(health))
+	
 	randomize()
 	for i in range(3):
 		var material_quantity = randf_range(1,3)
@@ -50,6 +51,7 @@ func _ready():
 
 func _on_body_entered(body):
 	var player_script = $"../../Player/PlayerInfo".get_script()
+
 	if diamonds_needed_amount > 0 and rubies_needed_amount > 0 and emeralds_needed_amount > 0:
 		print("We need something from you")
 		if player_script.diamond_amount >= diamonds_needed_amount and player_script.ruby_amount >= rubies_needed_amount and player_script.emerald_amount >= emeralds_needed_amount:
@@ -64,5 +66,9 @@ func _on_body_entered(body):
 				rubies_needed_amount = 0
 				emeralds_needed_amount = 0
 				updateRepairUI()
-			elif health == 0:
-				pass
+
+func _process(delta):
+	if health == 0:
+		health = 100
+		print("You died!")
+		get_tree().change_scene_to_file("res://Scenes/gameover.tscn")
