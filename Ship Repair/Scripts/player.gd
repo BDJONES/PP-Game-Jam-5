@@ -31,6 +31,7 @@ static func increase_diamond_amount():
 static func decrease_diamond_amount(amount: int):
 	diamond_amount -= amount
 	print(str(diamond_amount))
+	updateLabelText()
 	#amount_changed.emit()
 	
 static func increase_ruby_amount():
@@ -41,6 +42,7 @@ static func increase_ruby_amount():
 static func decrease_ruby_amount(amount: int):
 	ruby_amount -= amount
 	print(str(ruby_amount))
+	updateLabelText()
 	#amount_changed.emit()
 
 static func increase_emerald_amount():
@@ -51,6 +53,7 @@ static func increase_emerald_amount():
 static func  decrease_emerald_amount(amount: int):
 	emerald_amount -= amount
 	print(str(emerald_amount))
+	updateLabelText()
 	#amount_changed.emit()
 
 static func updateLabelText():
