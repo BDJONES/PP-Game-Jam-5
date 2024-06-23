@@ -61,9 +61,9 @@ static func updateLabelText():
 	
 
 func _ready():
-	var dLabel = $"../../UILayer/DiamondInventoryUI/DiamondContainer/NumberContainer/Count"
-	var rLabel = $"../../UILayer/RubyInventoryUI/RubyContainer/NumberContainer/Count"
-	var eLabel = $"../../UILayer/EmeraldInventoryUI/EmeraldContainer/NumberContainer/Count"
+	var dLabel = $"../../UILayer/InventoryContainer/DiamondInventoryUI/DiamondContainer/NumberContainer/Count"
+	var rLabel = $"../../UILayer/InventoryContainer/RubyInventoryUI/RubyContainer/NumberContainer/Count"
+	var eLabel = $"../../UILayer/InventoryContainer/EmeraldInventoryUI/EmeraldContainer/NumberContainer/Count"
 	diamondLabel = dLabel
 	rubyLabel = rLabel
 	emeraldLabel = eLabel

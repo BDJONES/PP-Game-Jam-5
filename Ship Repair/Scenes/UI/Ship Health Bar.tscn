@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bgvf2i67ot5gj" path="res://Assets/rectangle.webp" id="1_u18le"]
 
 [node name="ShipHealthBar" type="TextureProgressBar"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 548.0
+offset_bottom = 200.0
+scale = Vector2(0.5, 0.5)
 value = 100.0
 texture_under = ExtResource("1_u18le")
 texture_progress = ExtResource("1_u18le")

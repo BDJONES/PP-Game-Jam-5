@@ -19,4 +19,5 @@ func _on_body_entered(body):
 			print("Couldn't get player script")
 		else:
 			playerScript.increase_ruby_amount()
+			playerScript.updateLabelText()
 			queue_free()
