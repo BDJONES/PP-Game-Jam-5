@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://de71f8a0o1nbe"]
+[gd_scene load_steps=6 format=3 uid="uid://de71f8a0o1nbe"]
 
 [ext_resource type="Texture2D" uid="uid://dt6xuiktbcn2p" path="res://Assets/Rocks and Gems/21.png" id="1_2p8jr"]
 [ext_resource type="Script" path="res://Scripts/emerald.gd" id="1_cwacc"]
@@ -6,11 +6,32 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_rqmic"]
 radius = 13.0
 
+[sub_resource type="Animation" id="Animation_vrkbe"]
+resource_name = "move"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1krr"]
+_data = {
+"move": SubResource("Animation_vrkbe")
+}
+
 [node name="Emerald" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_cwacc")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+z_index = 50
 position = Vector2(1, -11)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_2p8jr")
@@ -18,5 +39,10 @@ texture = ExtResource("1_2p8jr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
 shape = SubResource("CircleShape2D_rqmic")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l1krr")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
