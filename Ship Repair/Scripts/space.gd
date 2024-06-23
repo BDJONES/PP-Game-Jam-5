@@ -7,8 +7,9 @@ const SPEED = 60
 var diamond = preload("res://Scenes/Resource_Scenes/diamond.tscn")
 var emerald = preload("res://Scenes/Resource_Scenes/emerald.tscn")
 var ruby = preload("res://Scenes/Resource_Scenes/ruby.tscn")
+var meteor = preload("res://Scenes/meteor.tscn")
 
-var preloaded_objects = [diamond, emerald, ruby]
+var preloaded_objects = [diamond, emerald, ruby, meteor]
 var rand_x
 var rand_y
 

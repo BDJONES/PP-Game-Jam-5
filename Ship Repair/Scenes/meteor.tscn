@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0ib6koqr8lo8"]
+
+[ext_resource type="Texture2D" uid="uid://bs6lwd7qwmwqh" path="res://Assets/Astronaut/spr_meteor_small.png" id="1_a3ce8"]
+[ext_resource type="Script" path="res://Scripts/meteor.gd" id="1_l62jl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6l73j"]
+radius = 59.0339
+
+[node name="Meteor" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_l62jl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -47)
+texture = ExtResource("1_a3ce8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -43)
+shape = SubResource("CircleShape2D_6l73j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
