@@ -2,7 +2,6 @@ extends Area2D
 
 #var mat_type = materialtype.diamond
 @onready var player: Node = get_node("../Player")
-
 func _on_body_entered(body):
 	print("Increasing number of Diamond")
 	if player == null:
@@ -13,4 +12,13 @@ func _on_body_entered(body):
 			print("Couldn't get player script")
 		else:
 			playerScript.increase_diamond_amount()
+			playerScript.updateLabelText()
 			queue_free()
+
+func _ready():
+	move_diamond()
+
+func move_diamond():
+	print("Moving diamond")
+	print(transform.x.x)
+	

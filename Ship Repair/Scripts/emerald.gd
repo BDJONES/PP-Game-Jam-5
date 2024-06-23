@@ -13,4 +13,5 @@ func _on_body_entered(body):
 			print("Couldn't get player script")
 		else:
 			playerScript.increase_emerald_amount()
+			playerScript.updateLabelText()
 			queue_free()
