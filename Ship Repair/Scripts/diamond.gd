@@ -18,8 +18,9 @@ func _on_body_entered(body):
 		if playerScript == null:
 			print("Couldn't get player script")
 		else:
-			playerScript.increase_diamond_amount()
-			playerScript.updateLabelText()
+			if (body.name == "Player"):
+				playerScript.increase_diamond_amount()
+				playerScript.updateLabelText()
 			queue_free()
 
 func _ready():

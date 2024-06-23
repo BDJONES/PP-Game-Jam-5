@@ -2412,7 +2412,7 @@ scale = Vector2(2, 2)
 [node name="BottomBoundry" parent="." instance=ExtResource("13_7nkkg")]
 position = Vector2(-388, 384)
 scale = Vector2(2, 2)
-collision_layer = 2
+collision_layer = 2147483648
 
 [node name="LeftBoundry" parent="." instance=ExtResource("13_7nkkg")]
 position = Vector2(-1318, -138)
