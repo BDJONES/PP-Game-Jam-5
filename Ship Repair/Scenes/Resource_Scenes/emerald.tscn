@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/emerald.gd" id="1_cwacc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rqmic"]
-radius = 13.0
+radius = 22.0227
 
 [sub_resource type="Animation" id="Animation_vrkbe"]
 resource_name = "move"
@@ -33,7 +33,7 @@ script = ExtResource("1_cwacc")
 [node name="Sprite" type="Sprite2D" parent="."]
 z_index = 50
 position = Vector2(1, -11)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_2p8jr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

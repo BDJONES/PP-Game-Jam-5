@@ -22,8 +22,8 @@ func _on_timer_timeout():
 	
 	var object = preloaded_objects.pick_random().instantiate()
 	
-	rand_x = randf_range(-576, 576)
-	rand_y = -330
+	rand_x = randf_range(-1600, 800)
+	rand_y = -1114
 	
 	object.global_position = Vector2(rand_x, rand_y)
 	

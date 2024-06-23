@@ -7,6 +7,7 @@ const SPEED = 60
 
 func _physics_process(delta):
 	position.y += SPEED * delta
+	rotation += -0.05
 
 func _on_body_entered(body):
 	print("Increasing number of Diamond")

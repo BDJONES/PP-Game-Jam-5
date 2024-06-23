@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cwykap55ln6um" path="res://Assets/Rocks and Gems/23.png" id="1_kruva"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_214kt"]
-radius = 11.0
+radius = 19.0263
 
 [node name="Area2D" type="Area2D"]
 collision_mask = 2
@@ -13,7 +13,7 @@ script = ExtResource("1_hf0yj")
 [node name="Sprite" type="Sprite2D" parent="."]
 z_index = 50
 position = Vector2(1, -11)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_kruva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
